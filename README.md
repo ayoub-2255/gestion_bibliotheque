@@ -34,9 +34,6 @@ docker exec -it app bash
 # Installer les dépendances PHP
 composer install
 
-# Installer les dépendances frontend
-npm install && npm run dev
-
 # Copier le fichier d'environnement et générer la clé
 cp .env.example .env
 php artisan key:generate
@@ -74,7 +71,9 @@ docker exec -it app bash
 🧰 Laravel / Artisan
 
 php artisan migrate          # Exécuter les migrations
+
 php artisan db:seed          # Exécuter les seeders
+
 php artisan serve            # Lancer le serveur Laravel localement
 
 👨‍💻 Auteur
